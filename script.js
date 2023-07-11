@@ -1,16 +1,16 @@
-//your JS code here. If required.
-function removeColor(color) {
-  var colorList = document.getElementById("colorSelect");
-  var colorItems = colorList.getElementsByTagName("option");
-
-  for (var i = 0; i < colorItems.length; i++) {
-    var item = colorItems[i];
-    if (item.firstChild.nodeValue.trim() === color) {
-      colorList.removeChild(item);
-      break;
+///your JS code here. If required.
+let select = document.getElementById("colorSelect");
+let btn =  document.querySelector("input[type=button]")
+btn.addEventListener("click", ()=>{       
+	//select.children--> will give all the child elements of select element
+    for (const child of select.children) {
+		//select.value--> will give value of the selected element
+        if(child.value === select.value){
+			//child.remove()-->remove the child element
+                child.remove();
+         }
     }
-  }
-}
+})
 
 
 
